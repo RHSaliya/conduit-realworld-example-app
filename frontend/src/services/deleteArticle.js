@@ -6,7 +6,7 @@ async function deleteArticle({ slug, headers }) {
     const { data } = await axios({
       headers,
       method: "DELETE",
-      url: `${import.meta.env.VITE_DB_TARGET ?? ""}/api/articles/${slug}/`,
+      url: `api/articles/${slug}/`,
     });
 
     return data;

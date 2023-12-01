@@ -7,7 +7,7 @@ async function postComment({ body, headers, slug }) {
       data: { comment: { body } },
       headers,
       method: "POST",
-      url: `${import.meta.env.VITE_DB_TARGET ?? ""}/api/articles/${slug}/comments`,
+      url: `api/articles/${slug}/comments`,
     });
 
     return data.comment;

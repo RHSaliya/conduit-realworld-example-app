@@ -7,7 +7,7 @@ async function setArticle({ body, description, headers, slug, tagList, title }) 
       data: { article: { title, description, body, tagList } },
       headers,
       method: slug ? "PUT" : "POST",
-      url: slug ? `${import.meta.env.VITE_DB_TARGET ?? ""}/api/articles/${slug}` : `${import.meta.env.VITE_DB_TARGET ?? ""}/api/articles`,
+      url: slug ? `api/articles/${slug}` : `api/articles`,
     });
 
     return data.article.slug;

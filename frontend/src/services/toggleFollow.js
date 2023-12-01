@@ -6,7 +6,7 @@ async function toggleFollow({ following, headers, username }) {
     const { data } = await axios({
       headers,
       method: following ? "DELETE" : "POST",
-      url: `${import.meta.env.VITE_DB_TARGET ?? ""}/api/profiles/${username}/follow`,
+      url: `api/profiles/${username}/follow`,
     });
 
     return data.profile;
