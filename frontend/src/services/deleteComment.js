@@ -6,7 +6,7 @@ async function deleteComment({ commentId, headers, slug }) {
     const { data } = await axios({
       headers,
       method: "DELETE",
-      url: `api/articles/${slug}/comments/${commentId}`,
+      url: `${import.meta.env.VITE_DB_TARGET ?? "api"}/articles/${slug}/comments/${commentId}`,
     });
 
     return data;

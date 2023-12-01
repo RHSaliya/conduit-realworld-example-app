@@ -6,7 +6,7 @@ async function userSignUp({ username, email, password }) {
     const { data } = await axios({
       data: { user: { username, email, password } },
       method: "POST",
-      url: "api/users",
+      url: `${import.meta.env.VITE_DB_TARGET ?? "api"}/users`,
     });
 
     const { user } = data;
