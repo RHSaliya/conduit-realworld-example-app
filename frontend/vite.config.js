@@ -11,20 +11,10 @@ export default ({ mode }) => {
     server: {
       port: 3000,
       host: true,
-      proxy: {
-        '/api': {
-          target: process.env.VITE_DB_TARGET ?? 'http://localhost:3001'
-        }
-      }
     },
     preview: {
       port: 3000,
       host: true,
-      proxy: {
-        '/api': {
-          target: process.env.VITE_DB_TARGET ?? 'http://localhost:3001'
-        }
-      }
     },
 
   })
