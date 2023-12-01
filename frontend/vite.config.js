@@ -13,7 +13,7 @@ export default ({ mode }) => {
       host: true,
       proxy: {
         '/api': {
-          target: process.env.DB_TARGET ?? 'http://localhost:3001'
+          target: process.env.VITE_DB_TARGET ?? 'http://localhost:3001'
         }
       }
     },
@@ -22,7 +22,7 @@ export default ({ mode }) => {
       host: true,
       proxy: {
         '/api': {
-          target: process.env.DB_TARGET ?? 'http://localhost:3001'
+          target: process.env.VITE_DB_TARGET ?? 'http://localhost:3001'
         }
       }
     },
