@@ -3,7 +3,7 @@ import errorHandler from "../helpers/errorHandler";
 
 async function getUser({ headers }) {
   try {
-    const { data } = await axios({ headers, url: `${import.meta.env.VITE_DB_TARGET ?? "api"}/user` });
+    const { data } = await axios({ headers, url: `${import.meta.env.VITE_DB_TARGET ?? ""}/api/user` });
 
     return data.user;
   } catch (error) {

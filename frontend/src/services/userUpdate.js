@@ -7,7 +7,7 @@ async function userUpdate({ headers, bio, email, image, password, username }) {
       data: { user: { bio, email, image, password, username } },
       headers,
       method: "PUT",
-      url: `${import.meta.env.VITE_DB_TARGET ?? "api"}/user`,
+      url: `${import.meta.env.VITE_DB_TARGET ?? ""}/api/user`,
     });
 
     const { user } = data;

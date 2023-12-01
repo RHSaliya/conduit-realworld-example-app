@@ -3,7 +3,7 @@ import errorHandler from "../helpers/errorHandler";
 
 async function getTags() {
   try {
-    const { data } = await axios({ url: `${import.meta.env.VITE_DB_TARGET ?? "api"}/tags` });
+    const { data } = await axios({ url: `${import.meta.env.VITE_DB_TARGET ?? ""}/api/tags` });
 
     return data.tags;
   } catch (error) {
