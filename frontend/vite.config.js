@@ -13,7 +13,7 @@ export default ({ mode }) => {
       host: true,
       proxy: {
         "/api": {
-          target: process.env.VITE_DB_TARGET,
+          target: process.env.VITE_DB_TARGET ?? "http://localhost:3001",
           changeOrigin: true,
           secure: false,
           ws: true,
@@ -26,7 +26,7 @@ export default ({ mode }) => {
     },
     proxy: {
       "/api": {
-        target: process.env.VITE_DB_TARGET,
+        target: process.env.VITE_DB_TARGET ?? "http://localhost:3001",
         changeOrigin: true,
         secure: false,
         ws: true,
